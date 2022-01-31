@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\ForgetController;
 
@@ -21,10 +22,17 @@ use App\Http\Controllers\ForgetController;
 //     return $request->user();
 // });
 
+//Login routes
 Route::post('/login', [AuthController::class, 'login']);
 
+//Register routes
 Route::post('/register', [AuthController::class, 'register']);
 
+//Forget Password routes
 Route::post('/forget-password', [ForgetController::class, 'forgetPassword']);
 
+//Reset routes
 Route::post('/reset-password', [ResetController::class, 'resetPassword']);
+
+//Curent User routes
+Route::get('/user', [UserController::class, 'user'])->middleware('auth:api');

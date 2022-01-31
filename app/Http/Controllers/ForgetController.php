@@ -5,13 +5,9 @@ namespace App\Http\Controllers;
 use Exception;
 use App\Models\User;
 use App\Mail\ForgetMail;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ForgetRequest;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
-use App\Http\Requests\RegisterRequest;
 
 class ForgetController extends Controller
 {

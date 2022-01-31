@@ -2,11 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use Exception;
-use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\ResetRequest;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class ResetController extends Controller
